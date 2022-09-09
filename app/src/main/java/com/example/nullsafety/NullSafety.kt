@@ -10,15 +10,19 @@ NullPointerException
 
 
     try {
-        var s: String? = null
-        println(s?.length)
+        val s: String? = null
+        println(s!!.length)
+
+        val a = 10 / 10
     } catch (e: NullPointerException) {
         println("Váriavel nula!")
 
     } catch (e: ArithmeticException) {
-        println("Impossível esse número ser dividido")
+        println("Impossível dividir por zero!")
     } finally {
+        println("Finally!")
 
     }
+    println("Fim!")
 }
 
